@@ -7,8 +7,9 @@ $latte = new Latte\Engine;
 $facturaDatos = array(
     'nombreEmpresa' => 'Mayfer, Sociedad Anonima',
     'nit' => '12345678',
+    'nombre' => 'Mayfer',
     'direccion' => 'Guatemala, Guatemala',
-    'numeroAutorizacion' => '7894-7896GF-7854GF-4521',
+    'numeroAutorizacion' => 'DC403F2E-FBB0-4CB3-A998-896D3B18A4AA',
     'serie' => 'PRUEBAS',
     'no' => '87654321',
     'fecha' => '15-02-2021',
@@ -29,7 +30,8 @@ $facturaDatos = array(
     ),
     'total' => 300.00,
     'fechaCertificacion' => '15-02-2021',
-    'certificador' => 'G4S DOCUMENTA SA, NIT: 600102007'
+    'certificadorNombre' => 'G4S DOCUMENTA, S.A.',
+    'certificadorNit' => 'NIT: 600102007'
 
 );
 ?>

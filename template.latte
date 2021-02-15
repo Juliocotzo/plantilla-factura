@@ -1,6 +1,7 @@
 <p style="text-align: center">
     {$nombreEmpresa} <br>
     NIT: {$nit} <br>
+    {$nombre} <br>
     {$direccion}
 </p>
 
@@ -11,18 +12,20 @@
 <p style="text-align: center">
     NUMERO DE AUTORIZACION: <br> {$numeroAutorizacion}<br>
     SERIE: {$serie} <br>
-    NO. {$no}
+    NO. {$no} 
 </p>
 
 <p style="text-align: center">
-    Sujeto a retencion definitiva ISR
+    <br>Sujeto a retencion definitiva ISR
 </p>
 <p>
-    FECHA DE EMISION {$fecha} <br>
+    <div style="text-align: center">FECHA DE EMISION {$fecha} <br></div>
     NIT: {$nitCliente} <br>
     NOMBRE: {$nombreCliente} <br>
     DIRECCION: {$direccionCliente}
 </p>
+<hr class="new2">
+
 <table class="center">
   <tr>
     <th>CANT</th>
@@ -37,14 +40,16 @@
         </tr>
     {/foreach}
 </table>
-<hr>
+<hr class="new2">
+<hr class="new2">
 <p style="text-align: center">
     TOTAL &emsp; &emsp;  &emsp; &emsp; &emsp;&emsp;&emsp;Q.{$total}
 </p>
 <p>
-    DATOS FISCALES <br>
-    Fecha de certificacion:<br>
-    {$fechaCertificacion}<br>
+    <div style="text-align: center"><br><br>DATOS FISCALES<br><br></div>
+    <b>Fecha de certificacion:</b><br>
+    <b>{$fechaCertificacion}</b><br>
 <br>
-    {$certificador}
+    <b>CERTIFICADOR: {$certificadorNombre}</b><br>
+    <b>{$certificadorNit}</b>
 </p>
