@@ -36,14 +36,24 @@ $facturaDatos = array(
 <!DOCTYPE html>
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <h1>Factura</h1>
-    
-    <?php
-    $html = $latte->renderToString('template.latte', $facturaDatos);
-    echo $html;
-    ?>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <h1 style="text-align: center">Factura</h1>
+
+            <?php
+            $html = $latte->renderToString('template.latte', $facturaDatos);
+            echo $html;
+            ?>
+        </div>
+        <div class="grid-item"></div>
+    </div>
+
 
 </body>
 

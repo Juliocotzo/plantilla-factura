@@ -1,43 +1,50 @@
-<p>{$nombreEmpresa} <br>
-NIT: {$nit} <br>
-{$direccion}</p>
+<p style="text-align: center">
+    {$nombreEmpresa} <br>
+    NIT: {$nit} <br>
+    {$direccion}
+</p>
 
-<p>DOCUMENTO TRIBUTARIO ELECTRONICO <br> FACTURA</p>
+<p style="text-align: center">
+    DOCUMENTO TRIBUTARIO ELECTRONICO <br> FACTURA
+</p>
 
-<p>NUMERO DE AUTORIZACION: <br> {$numeroAutorizacion}<br>
-SERIE: {$serie} <br>
-NO. {$no}
+<p style="text-align: center">
+    NUMERO DE AUTORIZACION: <br> {$numeroAutorizacion}<br>
+    SERIE: {$serie} <br>
+    NO. {$no}
+</p>
+
+<p style="text-align: center">
+    Sujeto a retencion definitiva ISR
 </p>
 <p>
-Sujeto a retencion definitiva ISR
+    FECHA DE EMISION {$fecha} <br>
+    NIT: {$nitCliente} <br>
+    NOMBRE: {$nombreCliente} <br>
+    DIRECCION: {$direccionCliente}
 </p>
-<p>
-FECHA DE EMISION {$fecha} <br>
-NIT: {$nitCliente} <br>
-NOMBRE: {$nombreCliente} <br>
-DIRECCION: {$direccionCliente}
-</p>
-<table style="width:20%">
+<table class="center">
   <tr>
     <th>CANT</th>
     <th>DESCRIPCION</th>
     <th>TOTAL</th>
   </tr>
-  {foreach $productos as $producto}
-  <tr>
-    <td>{$producto["cantidad"]}</td>
-    <td>{$producto["descripcion"]}</td>
-    <td>{$producto["total"]}</td>
-  </tr>
-	{/foreach}
+    {foreach $productos as $producto}
+        <tr>
+            <td>{$producto["cantidad"]}</td>
+            <td>{$producto["descripcion"]}</td>
+            <td>{$producto["total"]}</td>
+        </tr>
+    {/foreach}
 </table>
-<p>
-TOTAL {$total}
+<hr>
+<p style="text-align: center">
+    TOTAL &emsp; &emsp;  &emsp; &emsp; &emsp;&emsp;&emsp;Q.{$total}
 </p>
 <p>
-DATOS FISCALES <br>
-Fecha de certificacion:<br>
-{$fechaCertificacion}<br>
+    DATOS FISCALES <br>
+    Fecha de certificacion:<br>
+    {$fechaCertificacion}<br>
 <br>
-{$certificador}
+    {$certificador}
 </p>
