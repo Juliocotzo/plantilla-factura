@@ -1,0 +1,43 @@
+<p>{$nombreEmpresa} <br>
+NIT: {$nit} <br>
+{$direccion}</p>
+
+<p>DOCUMENTO TRIBUTARIO ELECTRONICO <br> FACTURA</p>
+
+<p>NUMERO DE AUTORIZACION: <br> {$numeroAutorizacion}<br>
+SERIE: {$serie} <br>
+NO. {$no}
+</p>
+<p>
+Sujeto a retencion definitiva ISR
+</p>
+<p>
+FECHA DE EMISION {$fecha} <br>
+NIT: {$nitCliente} <br>
+NOMBRE: {$nombreCliente} <br>
+DIRECCION: {$direccionCliente}
+</p>
+<table style="width:20%">
+  <tr>
+    <th>CANT</th>
+    <th>DESCRIPCION</th>
+    <th>TOTAL</th>
+  </tr>
+  {foreach $productos as $producto}
+  <tr>
+    <td>{$producto["cantidad"]}</td>
+    <td>{$producto["descripcion"]}</td>
+    <td>{$producto["total"]}</td>
+  </tr>
+	{/foreach}
+</table>
+<p>
+TOTAL {$total}
+</p>
+<p>
+DATOS FISCALES <br>
+Fecha de certificacion:<br>
+{$fechaCertificacion}<br>
+<br>
+{$certificador}
+</p>
